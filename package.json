@@ -1,0 +1,30 @@
+{
+  "name": "gendra.mx",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "run-s clean serve",
+    "prod": "parcel build src/index.html",
+    "clean": "rimraf dist",
+    "serve": "parcel serve src/index.html --no-cache --port 3000 --log-level verbose"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "not dead"
+  ],
+  "author": "Jorge Garduño <jorge@gendra.dev>",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-postcss": "^2.0.0-alpha.3",
+    "@parcel/transformer-posthtml": "^2.0.0-alpha.3",
+    "@parcel/transformer-sass": "^2.0.0-alpha.3",
+    "autoprefixer": "^9.8.0",
+    "parcel": "^2.0.0-alpha.3.2",
+    "sass": "^1.26.8"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^1.4.6"
+  }
+}
