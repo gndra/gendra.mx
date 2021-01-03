@@ -1,13 +1,18 @@
 module.exports = {
-  purge: [
-    './src/sass/**/*.sass',
-    './src/**/*.html',
-  ],
+  purge: {
+    content: [
+      './src/sass/**/*.sass',
+      './src/**/*.html',
+    ]
+  },
+  future: {
+    purgeLayersByDefault: true,
+  },
   theme: {
     extend: {
       colors: {
         gendra: {
-          'primary': '#394C64',
+          'primary': '#002B37',
           'secondary': '#00A8B4',
           'text-strong': '#878787',
           'text-light': '#B2B2B2',
@@ -15,10 +20,14 @@ module.exports = {
       },
       fontFamily: {
         'header': "'Heebo', sans-serif",
-        'body': "'Rasa', serif"
+        'sans': "'Nunito', serif"
       }
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography')
+  ],
 }
