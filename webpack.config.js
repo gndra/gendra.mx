@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'main.css'),
+  entry: [
+    path.resolve(__dirname, 'src', 'main.css'),
+    path.resolve(__dirname, 'src/js', 'app.js')
+  ],
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -33,13 +37,20 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
       }
     ],
   },
   devServer: {
-    hot: true,
-    hotOnly: true,
-    injectHot: (compilerConfig) => compilerConfig.name === 'only-include'
+    compress: true,
+    lazy: true,
+    filename: 'bundle.js'
   },
   plugins: [
     new MiniCssExtractPlugin(),
