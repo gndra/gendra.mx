@@ -48,9 +48,8 @@ module.exports = {
     ],
   },
   devServer: {
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    lazy: true,
-    filename: 'bundle.js'
   },
   plugins: [
     new MiniCssExtractPlugin(),

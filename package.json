@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "webpack serve --mode development",
+    "dev": "webpack serve --hot --mode development",
     "prod": "webpack --mode development"
   },
   "browserslist": [
