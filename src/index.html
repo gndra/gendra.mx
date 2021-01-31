@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" style="scroll-behavior: smooth">
     <head>
         <title>Gendra</title>
 
@@ -15,13 +15,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">
-        <header class="w-full bg-gendra-primary">
-            <div class="container mx-auto flex flex-col">
-                <nav class="flex justify-between items-center">
+        <header id="inicio" class="w-full bg-gendra-primary">
+            <nav class="fixed w-full bg-gendra-primary z-50">
+                <div class="container mx-auto flex justify-between items-center">
                     <a href="#" class="logo"></a>
                     <menu class="flex items-baseline justify-center text-white font-light font-header text-sm">
-                        <li class="list-none uppercase selected">Inicio</li>
-                        <li class="list-none uppercase">Nosotros</li>
+                        <li class="list-none uppercase"><a href="#inicio" class="appearance-none no-underline m-0 p-0">Inicio</a></li>
+                        <li class="list-none uppercase"><a href="#oferta" class="appearance-none no-underline m-0 p-0">Nuestra oferta</a></li>
+                        <li class="list-none uppercase"><a href="#testimonios" class="appearance-none no-underline">Testimonios</a></li>
+                        <li class="list-none uppercase"><a href="#nosotros" class="appearance-none no-underline">Nosotros</a></li>
+                        <li class="list-none uppercase"><a href="#equipo" class="appearance-none no-underline">Equipo</a></li>
+                        <li class="list-none uppercase"><a href="#contacto" class="appearance-none no-underline">Contacto</a></li>
                     </menu>
                     <div class="flex items-center justify-end">
                         <a href="mailto:hola@gendra.mx?subject=Contacto Gendra" class="appearance-none no-underline">
@@ -35,18 +39,20 @@
                             </svg>
                         </a>
                     </div>
-                </nav>
+                </div>
+            </nav>
+            <div class="container mx-auto flex flex-col pt-20">
 
                 <section class="flex flex-col md:flex-row justify-between items-center h-full mt-10">
-                    <div class="flex flex-col w-full md:w-6/12 items-end py-20 md:py-32">
+                    <div class="flex flex-col w-full lg:w-6/12 items-end py-20 md:py-32">
                         <h1 class="text-6xl font-header font-extrabold text-right text-white leading-snug">
                             Transformando<br><span class="text-gendra-secondary">el futuro</span>
                         </h1>
                         <p class="text-white font-sans text-xl font-light text-right pl-10 mt-10">
-                            Desarrollamos herramientas para el futuro, disminuyendo costos, aumentando ingresos y mejorando la productividad de los colaboradores y sus procesos, dándole valor e interpretación a todos los datos de su operación
+                            El mundo esta cambiado, las empresas necesitan ideas disruptivas para llevar su negocio <span class="border-b-2 border-gendra-secondary">al siguiente nivel</span>, y nosotros nos movemos contigo.
                         </p>
                     </div>
-                    <div class="w-full md:w-6/12 ml-0 md:ml-10 flex self-end">
+                    <div class="w-full lg:w-6/12 ml-0 md:ml-10 flex self-end px-10 md:px-0">
                         <img src="images/illustration_header.svg" style="margin-bottom: -1px" height="569" >
                     </div>
                 </section>
@@ -57,29 +63,33 @@
             <div class="bg-white">
 
                 <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+                    <div class="grid grid-cols-2 gap-8 md:grid-cols-7 lg:grid-cols-6">
                         <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="images/brandin_logo_gray.png" alt="Brand In">
+                            <img class="h-12 object-contain" src="images/brandin_logo_gray.png" alt="Brand In">
                         </div>
                         <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="images/findep_logo_gray.png" alt="Financiera Independencia">
+                            <img class="h-12 object-contain" src="images/findep_logo_gray.png" alt="Financiera Independencia">
                         </div>
                         <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                            <img class="h-12" src="images/apoyo_logo_gray.png" alt="StaticKit">
-                        </div>
-                        <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                            <img class="h-12" src="images/finsol_logo_gray.png" alt="Transistor">
+                            <img class="h-12 object-contain" src="images/apoyo_logo_gray.png" alt="Apoyo Economico">
                         </div>
                         <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-                            <img class="h-12" src="images/premia2_logo.png" alt="Workcation">
+                            <img class="h-12 object-contain" src="images/masnomina_logo_gray.png" alt="MasNomina">
                         </div>
+                        <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+                            <img class="h-12 object-contain" src="images/finsol_logo_gray.png" alt="Finsol">
+                        </div>
+                        <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
+                            <img class="h-12 object-contain" src="images/premia2_logo.png" alt="Premia2">
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="bg-white">
+        <div id="oferta" class="bg-white">
             <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
                 <div>
                     <h2 class="text-base font-semibold text-gendra-secondary uppercase tracking-wide">Todo lo que necesitas</h2>
@@ -89,7 +99,7 @@
                 <div class="mt-12 lg:mt-0 lg:col-span-2">
                     <dl class="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-5 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                             </svg>
                             <div class="ml-3">
@@ -103,7 +113,7 @@
                         </div>
 
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                             <div class="ml-3">
@@ -117,7 +127,7 @@
                         </div>
 
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                             </svg>
                             <div class="ml-3">
@@ -131,7 +141,7 @@
                         </div>
 
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
                             </svg>
                             <div class="ml-3">
@@ -145,7 +155,7 @@
                         </div>
 
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
@@ -161,7 +171,7 @@
 
 
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                             </svg>
                             <div class="ml-3">
@@ -175,7 +185,7 @@
                         </div>
 
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
                             <div class="ml-3">
@@ -189,7 +199,7 @@
                         </div>
 
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                             </svg>
                             <div class="ml-3">
@@ -202,7 +212,7 @@
                             </div>
                         </div>
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                             </svg>
                             <div class="ml-3">
@@ -215,7 +225,7 @@
                             </div>
                         </div>
                         <div class="flex">
-                            <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="flex-shrink-0 h-6 w-6 text-gendra-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                             <div class="ml-3">
@@ -241,7 +251,7 @@
                 </h2>
                 <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
                     <div class="inline-flex rounded-md shadow">
-                        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gendra-primary hover:bg-opacity-90">
+                        <a href="#contacto" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gendra-primary hover:bg-opacity-90">
                             Contáctanos
                         </a>
                     </div>
@@ -369,7 +379,7 @@
 
 
         <!-- This example requires Tailwind CSS v2.0+ -->
-        <section class="bg-gendra-primary overflow-hidden">
+        <section id="testimonios" class="bg-gendra-primary overflow-hidden">
             <div class="relative max-w-7xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20">
 
                 <div class="relative lg:flex lg:items-center">
@@ -404,19 +414,22 @@
             </div>
         </section>
 
-        <div class="py-16 bg-gray-50 overflow-hidden">
+        <div id="nosotros" class="py-16 bg-gray-50 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
                 <div class="text-base max-w-prose mx-auto lg:max-w-none">
                     <h2 class="text-base text-gendra-secondary font-semibold tracking-wide uppercase">Pensando de otro modo</h2>
                     <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gendra-primary sm:text-4xl font-header">Lo que nos hace diferentes</p>
                 </div>
                 <div class="relative z-10 text-base max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
-                    <p class="text-lg text-gray-500">Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.</p>
+                    <p class="text-lg text-gray-500">
+                        Somos una empresa que piensa <b>out-of-the-box</b>, buscamos adelantarnos a las necesidades de todos nuestros clientes, con el fin de anticipar cualquier eventualidad futura.
+                        Tenemos más de 4 años en el mercado especializándose en transformar digitalmente las empresas que confían en nosotros.
+                    </p>
                 </div>
                 <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
                     <div class="relative z-10">
                         <div class="prose prose-indigo text-gray-500 mx-auto lg:max-w-none">
-                            <p>Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.</p>
+                            <p>La idea de Gendra nacio de una necesidad visible; las empresas ya no se estan preocupando por sus clientes como si fueran ellos mismos.</p>
                             <ul>
                                 <li>Quis elit egestas venenatis mattis dignissim.</li>
                                 <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
@@ -474,7 +487,7 @@
         </div>
 
         <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="bg-gendra-secondary bg-opacity-20">
+        <div id="equipo" class="bg-gendra-secondary bg-opacity-20">
             <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
                 <div class="space-y-8 sm:space-y-12">
                     <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
@@ -498,23 +511,7 @@
             </div>
         </div>
 
-        <!--
-  This example requires Tailwind CSS v2.0+
-
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ]
-  }
-  ```
--->
-        <div class="relative bg-gray-50">
+        <div id="contacto" class="relative bg-gray-50">
             <div class="lg:absolute lg:inset-0">
                 <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                     <img class="h-56 w-full object-cover lg:absolute lg:h-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80" alt="">
@@ -524,7 +521,7 @@
                 <div class="lg:pr-8">
                     <div class="max-w-md mx-auto sm:max-w-lg lg:mx-0">
                         <h2 class="text-3xl font-extrabold text-gendra-primary tracking-tight sm:text-4xl font-header">
-                            Let's work together
+                            Trabajemos juntos
                         </h2>
                         <p class="mt-4 text-lg text-gray-500 sm:mt-3">
                             We’d love to hear from you! Send us a message using the form opposite, or email us. We’d love to hear from you! Send us a message using the form opposite, or email us.
@@ -697,7 +694,7 @@
                     </a>
                 </div>
                 <p class="mt-8 text-center text-base text-gray-400">
-                    &copy; 2020 Gendra, Inc. All rights reserved.
+                    &copy; 2020 Gendra, Inc. Todos los derechos reservados.
                 </p>
             </div>
         </footer>
