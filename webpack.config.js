@@ -1,13 +1,17 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Dotenv = require('dotenv-webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require("copy-webpack-plugin")
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   entry: [
     path.resolve(__dirname, 'src', 'main.css'),
-    path.resolve(__dirname, 'src/js', 'app.js')
+    path.resolve(__dirname, 'src', 'app.js')
   ],
+  output: {
+    publicPath: '',
+  },
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -16,17 +20,12 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 1 } },
-          'postcss-loader',
-          'sass-loader'
+          'postcss-loader'
         ],
       },
       {
         test: /\.(svg|png|jpg)$/i,
-        use: [
-          {
-            loader: 'url-loader'
-          },
-        ],
+        type: 'asset/resource'
       },
       {
         test: /\.html$/,
@@ -34,7 +33,7 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              // root: path.resolve(__dirname, 'src')
+              minimize: true
             }
           }
         ]
@@ -58,6 +57,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "public" }
+      ],
+    }),
 ],
 }

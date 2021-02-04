@@ -6,7 +6,6 @@ namespace.apiUrl = process.env.API_URL
 namespace.recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY
 
 namespace.contactFormData = function () {
-
   return {
     // Indicators
     processing: false,

@@ -1,8 +1,8 @@
 module.exports = {
   purge: {
     content: [
-      './src/sass/**/*.sass',
-      './src/**/*.html',
+      './src/main.css',
+      './src/index.html',
     ]
   },
   future: {
