@@ -18,3 +18,5 @@ nav menu li {
 .selected {
     @apply border-gendra-secondary border-b-2 border-solid;
 }
+
+[x-cloak] { display: none; }
