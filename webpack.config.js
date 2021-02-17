@@ -15,10 +15,7 @@ module.exports = {
     publicPath: '',
   },
   optimization: {
-    minimize: true,
-    minimizer: [
-      new ClosurePlugin({mode: 'STANDARD'}, {})
-    ]
+    minimize: true
   },
   devtool: 'inline-source-map',
   module: {
@@ -32,7 +29,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(svg|png|jpg)$/i,
+        test: /\.(svg|png|jpg|jpeg)$/i,
         type: 'asset/resource'
       },
       {

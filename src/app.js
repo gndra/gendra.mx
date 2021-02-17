@@ -5,6 +5,16 @@ const namespace = window.__gendra = {}
 namespace.apiUrl = process.env.API_URL
 namespace.recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY
 
+namespace.watchVariable = function watchLoop(fnCondition, callback) {
+  if (fnCondition()) {
+    return callback();
+  }
+
+  setTimeout(() => {
+    watchLoop(fnCondition, callback)
+  }, 50);
+}
+
 namespace.contactFormData = function () {
   return {
     // Indicators
