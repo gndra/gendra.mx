@@ -1,4 +1,5 @@
 import 'alpinejs'
+import '../main.css'
 
 const namespace = window.__gendra = {}
 

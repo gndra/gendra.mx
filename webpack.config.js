@@ -6,12 +6,11 @@ const Dotenv = require('dotenv-webpack')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: [
-    path.resolve(__dirname, 'src', 'main.css'),
-    path.resolve(__dirname, 'src', 'app.js')
-  ],
+  entry: path.resolve(__dirname, 'src/js', 'app.js'),
   output: {
-    publicPath: '',
+    path: `${__dirname}/dist`,
+    filename: 'bundle.js',
+    publicPath: ''
   },
   // optimization: {
   //   minimize: true

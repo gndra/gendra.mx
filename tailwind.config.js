@@ -1,13 +1,16 @@
 module.exports = {
   purge: {
+    enabled: process.env.NODE_ENV === 'development',
+    preserveHtmlElements: false,
     content: [
-      './src/main.css',
-      './src/index.html',
+      './src/**/*.css',
+      './src/**/*.html',
     ]
   },
   future: {
     purgeLayersByDefault: true,
   },
+  darkMode: false,
   theme: {
     extend: {
       colors: {
