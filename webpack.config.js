@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
 const Dotenv = require('dotenv-webpack')
 const webpack = require('webpack')
-const ClosurePlugin = require('closure-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -13,9 +12,6 @@ module.exports = {
   ],
   output: {
     publicPath: '',
-  },
-  optimization: {
-    minimize: true
   },
   devtool: 'inline-source-map',
   module: {
