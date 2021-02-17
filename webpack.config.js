@@ -13,6 +13,9 @@ module.exports = {
   output: {
     publicPath: '',
   },
+  optimization: {
+    minimize: true
+  },
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -34,7 +37,7 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              minimize: true
+              minimize: false
             }
           }
         ]
