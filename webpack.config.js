@@ -61,6 +61,14 @@ module.exports = {
       filename: 'index.html',
       template: 'src/index.html',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'politicas.html',
+      template: 'src/politicas.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'aviso-de-privacidad.html',
+      template: 'src/aviso-de-privacidad.html',
+    }),
     new CopyPlugin({
       patterns: [
         { from: "public" }
